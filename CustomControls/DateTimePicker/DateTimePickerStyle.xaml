@@ -5,9 +5,24 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:DateTimePicker}">
-                    <Grid>
-                        <Button>Some Button</Button>
-                    </Grid>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="PART_TodayButton" Content="I dag" MinWidth="100" Margin="5"/>
+                            <Button x:Name="PART_TomorrowButton"  Content="I morgen" MinWidth="100" Margin="5"/>
+                        </StackPanel>
+                        <Calendar x:Name="PART_Calendar" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBox x:Name="PART_HourTextBox" MinWidth="30" Margin="5" />
+                            <TextBlock Text=":" VerticalAlignment="Center"/>
+                            <TextBox x:Name="PART_MinuteTextBox" MinWidth="30" Margin="5" />
+                            <TextBlock x:Name="PART_CollonTextBox" Text=":" VerticalAlignment="Center"/>
+                            <TextBox x:Name="PART_SecondTextBox" MinWidth="30" Margin="5" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="PART_OkButton" Content="Ok" MinWidth="100" Margin="5"/>
+                            <Button x:Name="PART_CancelButton"  Content="Annuler" MinWidth="100" Margin="5"/>
+                        </StackPanel>
+                    </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
