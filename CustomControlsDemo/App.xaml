@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:CustomControlsDemo"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="pack://application:,,,/CustomControls;component/Themes/Generic.xaml" />
     </Application.Resources>
 </Application>
